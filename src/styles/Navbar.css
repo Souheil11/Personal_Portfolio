@@ -1,0 +1,62 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 6rem;
+    user-select: none;
+}
+
+.navbar-h1{
+
+    font-size: 1.8rem;
+}
+
+.dot{
+    color: #00ff99;
+}
+
+.navbar-ul{
+
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.navbar-ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+.navbar-ul li a:active{ 
+    color: #00ff99;
+    border-bottom: #00ff99 2px solid;
+}
+
+.navbar-ul button{
+    padding: 0.5rem 1rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 600;
+    border: none;
+    border-radius: 0.5rem;
+    color: #1c1c22;
+    background-color: #00ff99;
+    cursor: pointer;
+    width: max-content;
+}
+
+.navbar-ul li a:hover{
+   
+    color: #00ff99;
+    transition: all 0.3s ease;
+    
+    
+}
+
+.navbar-ul button:hover{
+
+    background-color: #00ff99ca;
+    transition: all 0.3s ease;
+    
+}
