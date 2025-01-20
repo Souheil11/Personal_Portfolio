@@ -1,5 +1,7 @@
 import "../styles/HomePage.css";
 import { SocialIcon } from "react-social-icons";
+import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
 import { Link } from "react-router-dom";
 
 export default function HomePage() {
@@ -7,6 +9,8 @@ export default function HomePage() {
     "https://drive.google.com/file/d/1mHkfqwU2bh-_dMzxwpDtHvOEjeT2BVOP/view?usp=sharing";
   return (
     <>
+      <Navbar />
+
       <main>
         <section>
           <aside>
@@ -83,6 +87,7 @@ export default function HomePage() {
           </div>
         </div>
       </main>
+      <Footer />
     </>
   );
 }
