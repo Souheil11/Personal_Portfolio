@@ -1,7 +1,7 @@
 import "../styles/HomePage.css";
 import { SocialIcon } from "react-social-icons";
-import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from 'react';
 
