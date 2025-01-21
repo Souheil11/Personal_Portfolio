@@ -3,10 +3,23 @@ import { SocialIcon } from "react-social-icons";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import { Link } from "react-router-dom";
+import { useState, useEffect } from 'react';
 
 export default function HomePage() {
+
+  const [repoCount, setRepoCount] = useState("-");
+
+  useEffect(() => {
+    fetch("https://api.github.com/users/souheil11")
+      .then((response) => response.json())
+      .then((data) => setRepoCount(data.public_repos))
+      .catch((error) => console.error("Error fetching data:", error));
+  }, []);
+
   const resumeUrl =
     "https://drive.google.com/file/d/1mHkfqwU2bh-_dMzxwpDtHvOEjeT2BVOP/view?usp=sharing";
+
+
   return (
     <>
       <Navbar />
@@ -71,7 +84,7 @@ export default function HomePage() {
             Years of Experience
           </div>
           <div className="statCard">
-            <span className="number">10</span>
+            <span className="number">{repoCount}</span>
             <br />
             Repositories Created
           </div>
