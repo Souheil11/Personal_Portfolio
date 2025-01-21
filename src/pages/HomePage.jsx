@@ -1,7 +1,6 @@
 import "../styles/HomePage.css";
 import { SocialIcon } from "react-social-icons";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+
 import { Link } from "react-router-dom";
 import { useState, useEffect } from 'react';
 
@@ -22,7 +21,7 @@ export default function HomePage() {
 
   return (
     <>
-      <Navbar />
+
 
       <main>
         <section>
@@ -100,7 +99,7 @@ export default function HomePage() {
           </div>
         </div>
       </main>
-      <Footer />
+
     </>
   );
 }
