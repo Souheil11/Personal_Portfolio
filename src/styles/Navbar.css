@@ -1,3 +1,7 @@
+.navbarLogo a, a:link, a:visited, a:focus, a:hover, a:active{
+  text-decoration:none;
+}
+
 .navbar{
     display: flex;
     justify-content: space-between;
@@ -6,16 +10,18 @@
     user-select: none;
 }
 
-.navbar-h1{
+.navbarLogo{
 
     font-size: 1.8rem;
+    text-decoration: none;
+    color: white;
 }
 
 .dot{
     color: #00ff99;
 }
 
-.navbar-ul{
+.navbarLinksContainer{
 
     display: flex;
     list-style: none;
@@ -24,17 +30,17 @@
     font-size: 1.1rem;
 }
 
-.navbar-ul li a{
+.navbarLinks{
     text-decoration: none;
     color: white;
 }
 
-.navbar-ul li a:active{ 
+.navbarLinks:active{ 
     color: #00ff99;
     border-bottom: #00ff99 2px solid;
 }
 
-.navbar-ul button{
+.navbarLinksContainer button{
     padding: 0.5rem 1rem;
     font-family: 'JetBrains Mono', monospace;
     font-weight: 600;
@@ -46,7 +52,7 @@
     width: max-content;
 }
 
-.navbar-ul li a:hover{
+.navbarLinks:hover{
    
     color: #00ff99;
     transition: all 0.3s ease;
@@ -54,7 +60,7 @@
     
 }
 
-.navbar-ul button:hover{
+.navbarLinksContainer button:hover{
 
     background-color: #00ff99ca;
     transition: all 0.3s ease;

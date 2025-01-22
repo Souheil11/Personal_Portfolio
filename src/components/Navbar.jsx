@@ -1,30 +1,33 @@
-import '../styles/Navbar.css'
+import "../styles/Navbar.css";
+import { NavLink } from "react-router";
 
 export default function Navbar() {
-    return (
+  return (
+    <>
+      <nav className="navbar">
+        <NavLink >
+          <h1 to="/" className="navbarLogo">
+            Souhaiel<span className="dot">.</span>
+          </h1>
+        </NavLink>
 
-        <>
+        <nav className="navbarLinksContainer">
+          <NavLink to="/" className="navbarLinks">
+            Home
+          </NavLink>
+          <NavLink to="/" className="navbarLinks">
+            Projects
+          </NavLink>
+          <NavLink to="/" className="navbarLinks">
+            Resume
+          </NavLink>
+          <NavLink to="/" className="navbarLinks">
+            Biography
+          </NavLink>
 
-        <nav className="navbar">
-
-            <h1 className='navbar-h1'>Souhaiel<span className="dot">.</span></h1>
-            <ul className='navbar-ul'>
-                <li>        
-                    <a href="/">Home</a>
-                </li>   
-                <li>        
-                    <a href="/">Projects</a>
-                </li>   
-                <li>        
-                    <a href="/">Resume</a>
-                </li>   
-                <li>        
-                    <a href="/">Biography</a>
-                </li>
-                <button>Hire Me</button>   
-            </ul>
+          <button>Hire Me</button>
         </nav>
-
-        </>
-    )
+      </nav>
+    </>
+  );
 }
