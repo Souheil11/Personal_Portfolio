@@ -2,3 +2,7 @@
     background-color: #00ff99;
     color: #1c1c22;
 }
+
+a, a:link, a:visited, a:focus, a:hover, a:active{
+    text-decoration:none;
+  }

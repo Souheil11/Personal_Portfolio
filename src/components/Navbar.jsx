@@ -25,7 +25,15 @@ export default function Navbar() {
             Biography
           </NavLink>
 
+          <NavLink to="/" className="navbarLinks">
+            Biography
+          </NavLink>
+
+
+          <NavLink to="/" className="navbarLinks">
           <button>Hire Me</button>
+          </NavLink>
+         
         </nav>
       </nav>
     </>
