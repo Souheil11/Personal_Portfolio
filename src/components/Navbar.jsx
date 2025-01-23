@@ -15,22 +15,19 @@ export default function Navbar() {
           <NavLink to="/" className="navbarLinks">
             Home
           </NavLink>
-          <NavLink to="/" className="navbarLinks">
+          <NavLink to="/projects" className="navbarLinks">
             Projects
           </NavLink>
-          <NavLink to="/" className="navbarLinks">
+          <NavLink to="/resume" className="navbarLinks">
             Resume
           </NavLink>
-          <NavLink to="/" className="navbarLinks">
-            Biography
-          </NavLink>
-
-          <NavLink to="/" className="navbarLinks">
+          <NavLink to="/biography" className="navbarLinks">
             Biography
           </NavLink>
 
 
-          <NavLink to="/" className="navbarLinks">
+
+          <NavLink to="/contact" className="navbarLinks">
           <button>Hire Me</button>
           </NavLink>
          
