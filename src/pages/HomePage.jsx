@@ -16,7 +16,7 @@ export default function HomePage() {
   }, []);
 
   const resumeUrl =
-    "https://drive.google.com/file/d/1mHkfqwU2bh-_dMzxwpDtHvOEjeT2BVOP/view?usp=sharing";
+    "https://drive.google.com/file/d/1yQHjAh-MC7-ifhMGM__oX0rJ6WSaFbln/view?usp=sharing";
 
 
   return (
