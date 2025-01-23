@@ -1,11 +1,8 @@
-export default function Projects(){
-    return(
-        <>
-        <h1>Page under construction</h1>
-        </>
-    )
-
-
-
-
+import Construction from "../components/Construction";
+export default function Projects() {
+  return (
+    <>
+      <Construction />
+    </>
+  );
 }

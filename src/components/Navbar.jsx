@@ -5,8 +5,8 @@ export default function Navbar() {
   return (
     <>
       <nav className="navbar">
-        <NavLink >
-          <h1 to="/" className="navbarLogo">
+        <NavLink to="/">
+          <h1 className="navbarLogo">
             Souhaiel<span className="dot">.</span>
           </h1>
         </NavLink>
@@ -25,12 +25,9 @@ export default function Navbar() {
             Biography
           </NavLink>
 
-
-
           <NavLink to="/contact" className="navbarLinks">
-          <button>Hire Me</button>
+            <button>Hire Me</button>
           </NavLink>
-         
         </nav>
       </nav>
     </>

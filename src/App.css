@@ -6,3 +6,14 @@
 a, a:link, a:visited, a:focus, a:hover, a:active{
     text-decoration:none;
   }
+
+#root{
+
+min-height: 100vh;
+}  
+
+.under-construction{
+justify-items: center;
+margin: 6rem auto;
+width: fit-content;
+}

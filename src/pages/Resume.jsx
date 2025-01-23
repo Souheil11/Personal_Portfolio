@@ -1,11 +1,9 @@
-export default function Resume(){
-    return(
-        <>
-        <h1>Page under construction</h1>
-        </>
-    )
+import Construction from "../components/Construction";
 
-
-
-
+export default function Resume() {
+  return (
+    <>
+      <Construction />
+    </>
+  );
 }
