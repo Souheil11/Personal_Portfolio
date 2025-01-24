@@ -1,8 +1,7 @@
-.footer{
+footer{
     max-height: 130px;
     text-align: center;
     font-size: 0.7rem;
     color: #999;
-    margin: 6rem auto;
     padding-bottom: 0.5rem;
 }
