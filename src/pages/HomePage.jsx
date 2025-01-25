@@ -52,16 +52,19 @@ export default function HomePage() {
                 <SocialIcon
                   bgColor="#1c1c22"
                   fgColor="#00ff99"
+                  target="_blank"
                   url="https://www.linkedin.com/in/souhaiel-karbaa"
                 />
                 <SocialIcon
                   bgColor="#1c1c22"
                   fgColor="#00ff99"
+                  target="_blank"
                   url="https://github.com/Souheil11"
                 />
                 <SocialIcon
                   bgColor="#1c1c22"
                   fgColor="#00ff99"
+                  target="_blank"
                   url="https://gitlab.com/Souheil11"
                 />
               </div>
