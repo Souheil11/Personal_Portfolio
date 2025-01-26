@@ -5,14 +5,14 @@ export default function Navbar() {
   return (
     <>
       <nav className="navbar">
-        <NavLink to="/">
+        <NavLink style={{border: 'none'}} to="/">
           <h1 className="navbarLogo">
             Souhaiel<span className="dot">.</span>
           </h1>
         </NavLink>
 
         <nav className="navbarLinksContainer">
-          <NavLink to="/" className="navbarLinks">
+          <NavLink className={location.pathname === "/" ? "navbarLinks" : "navbarLinks"} to="/">
             Home
           </NavLink>
           <NavLink to="/projects" className="navbarLinks">
@@ -25,7 +25,7 @@ export default function Navbar() {
             Biography
           </NavLink>
 
-          <NavLink to="/contact" className="navbarLinks">
+          <NavLink style={{border: 'none'}} to="/contact" className="navbarLinks">
             <button>Hire Me</button>
           </NavLink>
         </nav>

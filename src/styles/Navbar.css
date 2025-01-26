@@ -1,5 +1,12 @@
-.navbarLogo a, a:link, a:visited, a:focus, a:hover, a:active{
-  text-decoration:none;
+.active{
+
+    color: #00ff99;
+    border-bottom: #00ff99 2px solid;
+}
+
+.isActive{
+
+    border: none !important;
 }
 
 .navbar{
@@ -15,6 +22,11 @@
     font-size: 1.8rem;
     text-decoration: none;
     color: white;
+
+}
+
+.navbarLogo .active{
+    border: none !important;
 }
 
 .dot{
@@ -35,10 +47,6 @@
     color: white;
 }
 
-.navbarLinks:active{ 
-    color: #00ff99;
-    border-bottom: #00ff99 2px solid;
-}
 
 .navbarLinksContainer button{
     padding: 0.5rem 1rem;
