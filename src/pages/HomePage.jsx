@@ -16,8 +16,10 @@ export default function HomePage() {
   }, []);
 
   const resumeUrl =
-    "https://drive.google.com/uc?export=download&id=1yQHjAh-MC7-ifhMGM__oX0rJ6WSaFbln";
+    "https://drive.google.com/file/d/1yQHjAh-MC7-ifhMGM__oX0rJ6WSaFbln/view?usp=sharing";
 
+
+  const resumeDirectDownloadLink = resumeUrl.replace("https://drive.google.com/file/d/" ,'https://drive.google.com/uc?export=download&id=').replace("/view?usp=sharing","")
 
   return (
     <>
@@ -41,7 +43,7 @@ export default function HomePage() {
             </div>
             <div className="infoLinks">
               <button
-                onClick={() => window.open(resumeUrl)}
+                onClick={() => window.open(resumeDirectDownloadLink)}
                 className="downloadCV"
               >
                 Download CV{" "}
