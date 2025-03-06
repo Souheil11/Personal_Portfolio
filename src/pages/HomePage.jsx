@@ -16,7 +16,7 @@ export default function HomePage() {
   }, []);
 
   const resumeUrl =
-    "https://drive.google.com/file/d/1sWc4W7H9kMjFE--HunljOdaQJBkiikSn/view?usp=sharing";
+    "https://drive.google.com/file/d/1qeyc-zXd-RZoXq55W6mD7QHnET4-i-W7/view?usp=sharing";
 
 
   const resumeDirectDownloadLink = resumeUrl.replace("https://drive.google.com/file/d/" ,'https://drive.google.com/uc?export=download&id=').replace("/view?usp=sharing","")
