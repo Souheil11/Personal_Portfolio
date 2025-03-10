@@ -1,10 +1,33 @@
 import "../styles/HomePage.css";
 import { SocialIcon } from "react-social-icons";
-
-import { Link } from "react-router-dom";
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
+import axios from "axios";
 
 export default function HomePage() {
+  const username = "Souheil11";
+  const [totalGithubCommits, setTotalGithubCommits] = useState("-");
+
+  useEffect(() => {
+    const fetchTotalCommits = async () => {
+      try {
+        const response = await axios.get(
+          `https://api.github.com/search/commits?q=author:${username}`,
+          {
+            headers: {
+              Accept: "application/vnd.github.cloak-preview",
+            },
+          }
+        );
+        setTotalGithubCommits(response.data.total_count);
+      } catch (error) {
+        console.error(
+          "Error fetching commits:",
+          error.response?.data || error.message
+        );
+      }
+    };
+    fetchTotalCommits();
+  }, []);
 
   const [repoCount, setRepoCount] = useState("-");
 
@@ -18,18 +41,20 @@ export default function HomePage() {
   const resumeUrl =
     "https://drive.google.com/file/d/1qeyc-zXd-RZoXq55W6mD7QHnET4-i-W7/view?usp=sharing";
 
-
-  const resumeDirectDownloadLink = resumeUrl.replace("https://drive.google.com/file/d/" ,'https://drive.google.com/uc?export=download&id=').replace("/view?usp=sharing","")
+  const resumeDirectDownloadLink = resumeUrl
+    .replace(
+      "https://drive.google.com/file/d/",
+      "https://drive.google.com/uc?export=download&id="
+    )
+    .replace("/view?usp=sharing", "");
 
   return (
     <>
-
-
       <main>
         <section>
           <aside>
             <div className="selfPresentation">
-              <h3 className="title">Full-Stack Developer</h3>
+              <h3 className="title">Full-Stack Developer | CCNA Certified</h3>
               <h1 className="hello">
                 Hello I'm <br />
                 <span className="name">Souhaiel Karbaa</span>
@@ -98,13 +123,12 @@ export default function HomePage() {
             Technologies Mastered
           </div>
           <div className="statCard">
-            <span className="number">100</span>
+            <span className="number">{totalGithubCommits}</span>
             <br />
             Code Commits
           </div>
         </div>
       </main>
-
     </>
   );
 }
