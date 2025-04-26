@@ -39,7 +39,7 @@ export default function HomePage() {
   }, []);
 
   const resumeUrl =
-    "https://drive.google.com/file/d/1qeyc-zXd-RZoXq55W6mD7QHnET4-i-W7/view?usp=sharing";
+    "https://drive.google.com/file/d/1jM3axjy_3z1lUO7Z_pFpRE4EyTNL1eyF/view?usp=sharing";
 
   const resumeDirectDownloadLink = resumeUrl
     .replace(
@@ -99,10 +99,12 @@ export default function HomePage() {
           </aside>
 
           <div className="image">
+          <div class="photoAnimation"></div>
             <img
               className="photo"
               src="./src/assets/photo_souhaiel_karbaa.png"
               alt="photo of souhaiel karbaa"
+              
             />
           </div>
         </section>
