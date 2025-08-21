@@ -99,7 +99,7 @@ export default function HomePage() {
           </aside>
 
           <div className="image">
-          <div class="photoAnimation"></div>
+          {/* <div class="photoAnimation"></div> */}
             <img
               className="photo"
               src="./src/assets/photo_souhaiel_karbaa.png"

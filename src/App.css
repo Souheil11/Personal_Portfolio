@@ -21,7 +21,7 @@ a:hover{
 }
 
 .under-construction {
-  justify-items: center;
+  text-align: center;
   margin: 6rem auto;
   width: fit-content;
 }
