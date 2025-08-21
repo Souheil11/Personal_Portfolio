@@ -1,3 +1,6 @@
+import "../styles/Construction.css"
+
+
 export default function Construction(){
     return (
   
