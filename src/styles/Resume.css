@@ -27,3 +27,27 @@
 ::marker {
   color: #00ff99;
 }
+
+.downloadResume{
+    margin: 2em auto;
+    background-color: #1c1c22;
+    font-family: "JetBrains Mono", monospace;
+    color: #00ff99;
+    border: 1px solid #00ff99;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 40%;
+    place-content: center;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.downloadResume:hover {
+    background-color: #00ff99;
+    color: #1c1c22;
+    transition: all 0.5s ease;
+    font-weight: 600;
+}
