@@ -16,7 +16,7 @@ export default function Biography() {
         
           <h1 className="bio-header">Biography</h1>
 
-          <img className="profielPhoto" src={profilePhoto} alt="Souhaiel photo" />
+          <img className="profilePhoto" src={profilePhoto} alt="Souhaiel photo" />
 
           <p>
             Hello, I’m <strong>Souhaiel Karbaa</strong> — an adaptable IT

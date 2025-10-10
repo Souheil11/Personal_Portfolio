@@ -15,7 +15,7 @@ margin: 4rem auto;
 .bio-story p {
   margin-bottom: 1rem;
 }
-.profielPhoto {
+.profilePhoto {
     display: block;
     margin: 0 auto 3.5rem auto;
     width: 200px;
@@ -28,7 +28,7 @@ margin: 4rem auto;
     display: block;
     margin: 4rem auto;
     max-width: 60%;
-    height: auto;
+    height: 450px;
     border-radius: 8px;
 }
 
