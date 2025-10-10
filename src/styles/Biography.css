@@ -1,0 +1,34 @@
+
+.bio-story{
+width: 80%;
+margin: 4rem auto;
+
+}
+
+.bio-header {
+    text-align: center;
+    font-size: 2.5em;
+    margin: 5rem 0 3.5rem 0;
+    color: white;
+}
+
+.bio-story p {
+  margin-bottom: 1rem;
+}
+.profielPhoto {
+    display: block;
+    margin: 0 auto 3.5rem auto;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.biographyPhotos{
+    display: block;
+    margin: 4rem auto;
+    max-width: 60%;
+    height: auto;
+    border-radius: 8px;
+}
+

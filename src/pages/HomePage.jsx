@@ -18,8 +18,8 @@ export default function HomePage() {
             },
           }
         );
-        setTotalGithubCommits(response.data.total_count);
-      } catch (error) {
+        setTotalGithubCommits(response.data.total_count + 50) // Adding 50 as a count for GitLab commits// 
+              } catch (error) {
         console.error(
           "Error fetching commits:",
           error.response?.data || error.message
