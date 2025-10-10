@@ -1,0 +1,29 @@
+.ResumeContainer{
+    width: 90%;
+    height: 100%;
+    text-align: center;
+    margin: auto;
+        line-height: 1.7;
+}
+
+.myname{
+    margin-top: 2.55em;
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+.skillsList, .Projects, .Experience , .Education, .Languages{
+    margin: 1em 0;
+    padding-left: 1.5em;
+ text-align: left;
+ list-style-type: disc;
+}
+
+.highlight{
+    font-weight: bold;
+    color: #00ff99;
+}   
+
+::marker {
+  color: #00ff99;
+}
