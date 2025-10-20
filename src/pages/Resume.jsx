@@ -188,7 +188,7 @@ export default function Resume() {
             <span className="highlight">
               Master’s Degree in Computer Science,
             </span>{" "}
-            Kobe Institute of Computing (KIC), Japan (2020-2022)
+            Kobe Institute of Computing (KIC), Japan (2022-2024)
           </li>
           <li>
             <span className="highlight">
