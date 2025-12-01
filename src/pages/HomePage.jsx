@@ -2,6 +2,7 @@ import "../styles/HomePage.css";
 import { SocialIcon } from "react-social-icons";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import CountUp from "react-countup";
 
 export default function HomePage() {
   const username = "Souheil11";
@@ -18,8 +19,8 @@ export default function HomePage() {
             },
           }
         );
-        setTotalGithubCommits(response.data.total_count + 50) // Adding 50 as a count for GitLab commits// 
-              } catch (error) {
+        setTotalGithubCommits(response.data.total_count + 50); // Adding 50 as a count for GitLab commits
+      } catch (error) {
         console.error(
           "Error fetching commits:",
           error.response?.data || error.message
@@ -27,7 +28,7 @@ export default function HomePage() {
       }
     };
     fetchTotalCommits();
-  }, []);
+  }, [username]);
 
   const [repoCount, setRepoCount] = useState("-");
 
@@ -49,88 +50,98 @@ export default function HomePage() {
     .replace("/view?usp=sharing", "");
 
   return (
-    <>
-      <main>
-        <section>
-          <aside>
-            <div className="selfPresentation">
-              <h3 className="title">Full-Stack Developer | CCNA Certified</h3>
-              <h1 className="hello">
-                Hello I'm <br />
-                <span className="name">Souhaiel Karbaa</span>
-              </h1>
-              <h3 className="description">
-                Enthusiastic Full-Stack Web Developer with profieciency in
-                modern Technologies such as JavaScript, PHP, ReactJS and
-                Laravel, always eager to learn and very flexible to adapt and
-                acquire new skills
-              </h3>
-            </div>
-            <div className="infoLinks">
+    <main className="home-container">
+      <section className="hero-section">
+        <div className="hero-content">
+          <div className="hero-text">
+            <span className="subtitle fade-in-up">Full-Stack Developer | CCNA Certified</span>
+            <h1 className="title fade-in-up delay-1">
+              Hello I&apos;m <br />
+              <span className="highlight-name">Souhaiel Karbaa</span>
+            </h1>
+            <p className="description fade-in-up delay-2">
+              Enthusiastic Full-Stack Web Developer with proficiency in modern
+              technologies such as JavaScript, PHP, ReactJS and Laravel. Always
+              eager to learn and flexible to adapt and acquire new skills.
+            </p>
+
+            <div className="cta-group fade-in-up delay-3">
               <button
                 onClick={() => window.open(resumeDirectDownloadLink)}
-                className="downloadCV"
+                className="btn-download"
               >
-                Download CV{" "}
-                <span className="material-symbols-outlined">download</span>
+                <span>Download CV</span>
+                <span className="material-symbols-outlined icon">download</span>
               </button>
 
-              <div className="socialLinks">
+              <div className="social-links">
                 <SocialIcon
-                  bgColor="#1c1c22"
+                  className="social-icon"
+                  bgColor="transparent"
                   fgColor="#00ff99"
                   target="_blank"
                   url="https://www.linkedin.com/in/souhaiel-karbaa"
+                  style={{ height: 40, width: 40, border: '1px solid #00ff99', borderRadius: '50%' }}
                 />
                 <SocialIcon
-                  bgColor="#1c1c22"
+                  className="social-icon"
+                  bgColor="transparent"
                   fgColor="#00ff99"
                   target="_blank"
                   url="https://github.com/Souheil11"
+                  style={{ height: 40, width: 40, border: '1px solid #00ff99', borderRadius: '50%' }}
                 />
                 <SocialIcon
-                  bgColor="#1c1c22"
+                  className="social-icon"
+                  bgColor="transparent"
                   fgColor="#00ff99"
                   target="_blank"
                   url="https://gitlab.com/Souheil11"
+                  style={{ height: 40, width: 40, border: '1px solid #00ff99', borderRadius: '50%' }}
                 />
               </div>
             </div>
-          </aside>
+          </div>
 
-          <div className="image">
-          {/* <div class="photoAnimation"></div> */}
-            <img
-              className="photo"
-              src="./src/assets/photo_souhaiel_karbaa.png"
-              alt="photo of souhaiel karbaa"
-              
-            />
-          </div>
-        </section>
-        <div className="stats">
-          <div className="statCard">
-            <span className="number">11</span>
-            <br />
-            Years of Experience
-          </div>
-          <div className="statCard">
-            <span className="number">{repoCount}</span>
-            <br />
-            Repositories Created
-          </div>
-          <div className="statCard">
-            <span className="number">6</span>
-            <br />
-            Technologies Mastered
-          </div>
-          <div className="statCard">
-            <span className="number">{totalGithubCommits}</span>
-            <br />
-            Code Commits
+          <div className="hero-image fade-in delay-2">
+            <div className="image-wrapper">
+              <img
+                src="./src/assets/photo_souhaiel_karbaa.png"
+                alt="Souhaiel Karbaa"
+                className="profile-photo"
+              />
+              <div className="image-glow"></div>
+            </div>
           </div>
         </div>
-      </main>
-    </>
+      </section>
+
+      <section className="stats-section fade-in-up delay-4">
+        <div className="stat-card">
+          <span className="stat-number">
+            <CountUp end={11} duration={2.5} />+
+          </span>
+          <span className="stat-label">Years of Experience</span>
+        </div>
+        <div className="stat-card">
+          <span className="stat-number">
+            {repoCount !== "-" ? <CountUp end={repoCount} duration={2.5} /> : "-"}
+          </span>
+          <span className="stat-label">Repositories Created</span>
+        </div>
+        <div className="stat-card">
+          <span className="stat-number">
+            <CountUp end={6} duration={2.5} />
+          </span>
+          <span className="stat-label">Technologies Mastered</span>
+        </div>
+        <div className="stat-card">
+          <span className="stat-number">
+            {totalGithubCommits !== "-" ? <CountUp end={totalGithubCommits} duration={2.5} /> : "-"}
+          </span>
+          <span className="stat-label">Code Commits</span>
+        </div>
+      </section>
+    </main>
   );
 }

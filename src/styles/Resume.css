@@ -1,53 +1,223 @@
-.ResumeContainer{
-    width: 90%;
-    height: 100%;
+.resume-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    color: #fff;
+}
+
+.resume-header {
     text-align: center;
-    margin: auto;
-        line-height: 1.7;
+    margin-bottom: 5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 3rem;
 }
 
-.myname{
-    margin-top: 5rem;
-    font-size: 2.5em;
-    font-weight: bold;
+.myname {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #fff;
 }
 
-.skillsList, .Projects, .Experience , .Education, .Languages{
-    margin: 1em 0;
-    padding-left: 1.5em;
- text-align: left;
- list-style-type: disc;
-}
-
-.highlight{
-    font-weight: bold;
+.position {
+    font-size: 1.5rem;
     color: #00ff99;
-}   
-
-::marker {
-  color: #00ff99;
+    margin-bottom: 2rem;
+    font-weight: 500;
 }
 
-.downloadResume{
-    margin: 2em auto;
-    background-color: #1c1c22;
-    font-family: "JetBrains Mono", monospace;
+.summary {
+    width: 100%;
+    margin: 0 auto 2rem auto;
+    line-height: 1.8;
+    color: #d1d1d1;
+}
+
+.section-title {
+    font-size: 2rem;
+    color: #00ff99;
+    margin-bottom: 2.5rem;
+    border-left: 4px solid #00ff99;
+    padding-left: 1rem;
+}
+
+.resume-section {
+    margin-bottom: 5rem;
+}
+
+/* Skills Grid */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.skill-category h4 {
+    margin-bottom: 1rem;
+    color: #fff;
+    font-size: 1.1rem;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.tags span {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.tags span:hover {
+    background: rgba(0, 255, 153, 0.1);
+    border-color: #00ff99;
+    color: #00ff99;
+    transform: translateY(-2px);
+}
+
+/* Timeline */
+.timeline {
+    position: relative;
+    border-left: 2px solid rgba(255, 255, 255, 0.1);
+    padding-left: 2rem;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 3rem;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -2.6rem;
+    top: 0.5rem;
+    width: 1rem;
+    height: 1rem;
+    background: #1c1c22;
+    border: 2px solid #00ff99;
+    border-radius: 50%;
+}
+
+.timeline-date {
+    color: #00ff99;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.timeline-content h4 {
+    font-size: 1.3rem;
+    margin-bottom: 0.3rem;
+    color: #fff;
+}
+
+.timeline-content h5 {
+    font-size: 1rem;
+    color: #a0a0a0;
+    margin-bottom: 1rem;
+    font-weight: 400;
+}
+
+.timeline-content ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    color: #d1d1d1;
+    line-height: 1.6;
+}
+
+.timeline-content li {
+    margin-bottom: 0.5rem;
+}
+
+/* Download Button */
+.downloadResume {
+    background: transparent;
+    font-family: inherit;
     color: #00ff99;
     border: 1px solid #00ff99;
-    padding: 0.5rem 1rem;
-    border-radius: 25px;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
     font-size: 1rem;
     cursor: pointer;
-    width: 40%;
-    place-content: center;
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    gap: 0.3rem;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .downloadResume:hover {
-    background-color: #00ff99;
+    background: #00ff99;
     color: #1c1c22;
-    transition: all 0.5s ease;
-    font-weight: 600;
+    box-shadow: 0 0 20px rgba(0, 255, 153, 0.4);
+}
+
+/* Animations */
+.fade-in {
+    animation: fadeIn 1s ease forwards;
+}
+
+.fade-in-up {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.delay-1 {
+    animation-delay: 0.2s;
+}
+
+.delay-2 {
+    animation-delay: 0.4s;
+}
+
+.delay-3 {
+    animation-delay: 0.6s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .myname {
+        font-size: 2.5rem;
+    }
+
+    .resume-container {
+        padding: 2rem 1rem;
+    }
+
+    .timeline {
+        padding-left: 1.5rem;
+    }
+
+    .timeline-item::before {
+        left: -2.1rem;
+    }
 }
