@@ -1,6 +1,7 @@
 import "../styles/HomePage.css";
 import { SocialIcon } from "react-social-icons";
 import { useState, useEffect } from "react";
+import mainPhoto from "../assets/photo_souhaiel_karbaa.png"
 import axios from "axios";
 import CountUp from "react-countup";
 
@@ -106,7 +107,7 @@ export default function HomePage() {
           <div className="hero-image fade-in delay-2">
             <div className="image-wrapper">
               <img
-                src="./src/assets/photo_souhaiel_karbaa.png"
+                src={mainPhoto}
                 alt="Souhaiel Karbaa"
                 className="profile-photo"
               />
