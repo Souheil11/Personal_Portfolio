@@ -47,7 +47,7 @@ export default function Resume() {
             <div className="skill-category">
               <h4>Languages</h4>
               <div className="tags">
-                <span>English (Fluent)</span><span>French (Fluent)</span><span>Arabic (Native)</span><span>German (Interm.)</span>
+                <span>English (Fluent)</span><span>French (Fluent)</span><span>Arabic (Native)</span><span>German (Interm.)</span><span>Japanese (Beginner)</span>
               </div>
             </div>
           </div>
@@ -92,7 +92,22 @@ export default function Resume() {
                 </ul>
               </div>
             </div>
+            <div className="timeline-item">
+              <div className="timeline-date">2011 – 2013</div>
+              <div className="timeline-content">
+                <h4>Ticketing & Reservations Agent</h4>
+                <h5>Lufthansa Group (Tunis, Tunisia)</h5>
+                <ul>
+                  <li>Managed ticketing and reservations for flights.</li>
+                  <li>Processed payments and provided customer support.</li>
+                  <li>Assisted with baggage handling and check-in procedures.</li>
+
+                </ul>
+              </div>
+            </div>
           </div>
+
+
         </section>
 
         <section className="resume-section fade-in-up delay-3">

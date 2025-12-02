@@ -75,7 +75,7 @@ export default function Contact() {
               className="form-select"
               disabled={formData.workType === "Hiring/Job Offer"}
             >
-              <option value="Low">Low ($500 - $1000)</option>
+              <option value="Low">Low ($100 - $1000)</option>
               <option value="Medium">Medium ($1000 - $5000)</option>
               <option value="High">High ($5000+)</option>
               <option value="Not Applicable">Not Applicable</option>
