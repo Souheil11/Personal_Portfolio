@@ -1,5 +1,5 @@
 import { createRoot } from 'react-dom/client'
-import { HashRouter, Routes, Route } from "react-router";
+import { HashRouter as Router, Routes, Route } from "react-router";
 import App from './App.jsx'
 import './index.css'
 import HomePage from './pages/HomePage.jsx';
@@ -7,7 +7,6 @@ import Projects from './pages/Projects.jsx';
 import Resume from './pages/Resume.jsx';
 import Biography from './pages/Biography.jsx';
 import Contact from './pages/Contact.jsx';
-import { HashRouter as Router } from 'react-router-dom';
 
 
 createRoot(document.getElementById('root')).render(
