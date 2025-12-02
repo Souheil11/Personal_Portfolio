@@ -7,17 +7,18 @@ import Projects from './pages/Projects.jsx';
 import Resume from './pages/Resume.jsx';
 import Biography from './pages/Biography.jsx';
 import Contact from './pages/Contact.jsx';
+import { HashRouter } from 'react-router-dom';
 
 createRoot(document.getElementById('root')).render(
-  <BrowserRouter>
+  <HashRouter>
     <Routes>
       <Route path="/" element={<App />} >
-      <Route index element={<HomePage />} />
-      <Route path="/projects" element={<Projects />} />
-      <Route path="/resume" element={<Resume />} />
-      <Route path="/biography" element={<Biography />} />
-      <Route path="/contact" element={<Contact />} />
+        <Route index element={<HomePage />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/resume" element={<Resume />} />
+        <Route path="/biography" element={<Biography />} />
+        <Route path="/contact" element={<Contact />} />
       </Route>
     </Routes>
-  </BrowserRouter>
+  </HashRouter>
 )
