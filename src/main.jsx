@@ -7,10 +7,11 @@ import Projects from './pages/Projects.jsx';
 import Resume from './pages/Resume.jsx';
 import Biography from './pages/Biography.jsx';
 import Contact from './pages/Contact.jsx';
+import { HashRouter as Router } from 'react-router-dom';
 
 
 createRoot(document.getElementById('root')).render(
-  <HashRouter>
+  <Router>
     <Routes>
       <Route path="/" element={<App />} >
         <Route index element={<HomePage />} />
@@ -20,5 +21,5 @@ createRoot(document.getElementById('root')).render(
         <Route path="/contact" element={<Contact />} />
       </Route>
     </Routes>
-  </HashRouter>
+  </Router>
 )
