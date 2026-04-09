@@ -31,11 +31,11 @@
 
 .subtitle {
   display: inline-block;
-  font-size: clamp(0.9rem, 2vw, 1.1rem);
+  font-size: clamp(0.9rem, 2vw, 3.1rem);
   color: #00ff99;
   margin-bottom: 1rem;
   letter-spacing: 1px;
-  font-weight: 500;
+  font-weight: 1000;
 }
 
 .title {

@@ -1,7 +1,7 @@
 import "../styles/HomePage.css";
 import { SocialIcon } from "react-social-icons";
 import { useState, useEffect } from "react";
-import mainPhoto from "../assets/photo_souhaiel_karbaa.png"
+import mainPhoto from "../assets/photo_souhaiel_karbaa.png";
 import axios from "axios";
 import CountUp from "react-countup";
 
@@ -18,13 +18,13 @@ export default function HomePage() {
             headers: {
               Accept: "application/vnd.github.cloak-preview",
             },
-          }
+          },
         );
         setTotalGithubCommits(response.data.total_count + 50); // Adding 50 as a count for GitLab commits
       } catch (error) {
         console.error(
           "Error fetching commits:",
-          error.response?.data || error.message
+          error.response?.data || error.message,
         );
       }
     };
@@ -46,7 +46,7 @@ export default function HomePage() {
   const resumeDirectDownloadLink = resumeUrl
     .replace(
       "https://drive.google.com/file/d/",
-      "https://drive.google.com/uc?export=download&id="
+      "https://drive.google.com/uc?export=download&id=",
     )
     .replace("/view?usp=sharing", "");
 
@@ -55,15 +55,22 @@ export default function HomePage() {
       <section className="hero-section">
         <div className="hero-content">
           <div className="hero-text">
-            <span className="subtitle fade-in-up">Full-Stack Developer | CCNA Certified</span>
+            <span className="subtitle fade-in-up">
+              {/* Full-Stack Developer | CCNA Certified */}IT Specialist
+            </span>
             <h1 className="title fade-in-up delay-1">
               Hello I&apos;m <br />
               <span className="highlight-name">Souhaiel Karbaa</span>
             </h1>
             <p className="description fade-in-up delay-2">
-              Enthusiastic Full-Stack Web Developer with proficiency in modern
+              {/* Enthusiastic Full-Stack Web Developer with proficiency in modern
               technologies such as JavaScript, PHP, ReactJS and Laravel. Always
-              eager to learn and flexible to adapt and acquire new skills.
+              eager to learn and flexible to adapt and acquire new skills. */}
+              Enthusiastic IT Specialist with a solid background in web
+              technologies and a growing foundation in networking and system
+              administration. Skilled in JavaScript, PHP, ReactJS, and Laravel,
+              with a strong willingness to learn, adapt, and expand expertise in
+              IT infrastructure and support.
             </p>
 
             <div className="cta-group fade-in-up delay-3">
@@ -82,7 +89,12 @@ export default function HomePage() {
                   fgColor="#00ff99"
                   target="_blank"
                   url="https://www.linkedin.com/in/souhaiel-karbaa"
-                  style={{ height: 40, width: 40, border: '1px solid #00ff99', borderRadius: '50%' }}
+                  style={{
+                    height: 40,
+                    width: 40,
+                    border: "1px solid #00ff99",
+                    borderRadius: "50%",
+                  }}
                 />
                 <SocialIcon
                   className="social-icon"
@@ -90,7 +102,12 @@ export default function HomePage() {
                   fgColor="#00ff99"
                   target="_blank"
                   url="https://github.com/Souheil11"
-                  style={{ height: 40, width: 40, border: '1px solid #00ff99', borderRadius: '50%' }}
+                  style={{
+                    height: 40,
+                    width: 40,
+                    border: "1px solid #00ff99",
+                    borderRadius: "50%",
+                  }}
                 />
                 <SocialIcon
                   className="social-icon"
@@ -98,7 +115,12 @@ export default function HomePage() {
                   fgColor="#00ff99"
                   target="_blank"
                   url="https://gitlab.com/Souheil11"
-                  style={{ height: 40, width: 40, border: '1px solid #00ff99', borderRadius: '50%' }}
+                  style={{
+                    height: 40,
+                    width: 40,
+                    border: "1px solid #00ff99",
+                    borderRadius: "50%",
+                  }}
                 />
               </div>
             </div>
@@ -126,7 +148,11 @@ export default function HomePage() {
         </div>
         <div className="stat-card">
           <span className="stat-number">
-            {repoCount !== "-" ? <CountUp end={repoCount} duration={2.5} /> : "-"}
+            {repoCount !== "-" ? (
+              <CountUp end={repoCount} duration={2.5} />
+            ) : (
+              "-"
+            )}
           </span>
           <span className="stat-label">Repositories Created</span>
         </div>
@@ -138,7 +164,11 @@ export default function HomePage() {
         </div>
         <div className="stat-card">
           <span className="stat-number">
-            {totalGithubCommits !== "-" ? <CountUp end={totalGithubCommits} duration={2.5} /> : "-"}
+            {totalGithubCommits !== "-" ? (
+              <CountUp end={totalGithubCommits} duration={2.5} />
+            ) : (
+              "-"
+            )}
           </span>
           <span className="stat-label">Code Commits</span>
         </div>
